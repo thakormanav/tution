@@ -1,123 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+        
+        img {
+
+            width: 70px;
+           
+            
+
         }
 
-        h2 {
-            text-align: center;
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://lh3.googleusercontent.com/p/AF1QipMpQ_nwUL2HcxAX6AuaNysHCC46ZtmvVzYcidhq=s1360-w1360-h1020') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+           
+            
         }
 
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 30px;
-            background-color: rgb(0, 136, 181);
+        nav {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+           
+         
+
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        input, textarea {
+        nav ul {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            border-radius: 10px;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
         }
 
-       .submit{
-        width:100px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: black;
-        background-color: aliceblue;
-       }
-       
-       .submit:hover{
-       background-color: aqua;
-       color: black;
-       }
+        nav li {
+            height: 50px;
+        }
 
-       
-       .reset{
-        width:100px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: black;
-        background-color: aliceblue;
-       }
-       
-       .reset:hover{
-       background-color: aqua;
-       color: black;
-       }
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
 
-       
-        @media screen and (max-width: 600px) {
-            form {
-                padding: 10px;
+        nav a:hover {
+            background-color: rgb(58, 56, 56);
+            color: white;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+
+
+            backdrop-filter: blur(100px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            opacity: 70%;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .sidebar li {
+            width: 100%;
+        }
+
+        .sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        @media(max-width:800px) {
+            .hideOnMobile {
+                display: none;
+                background: black;
             }
+
+        }
+
+
+        .menu-button {
+            display: block;
         }
     </style>
-    <title>Responsive User Inquiry Form</title>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+   
+    <title>Document</title>
 </head>
+
 <body>
-
-    <h2>User Inquiry Form</h2>
-
-    <form  name="submit-to-google-sheet" method="post" autocomplete="ON">
-        <!-- Name input -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <!-- Email input -->
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email" required>
+    <nav>
 
 
-         <!-- Email input -->
-         <label for="AGE">AGE:</label>
-         <input type="TEXT" id="AGE" name="AGE" required>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+</svg>
 
-      
-         <!-- Email input -->
-         <label for="AGE">Mobile NO:</label>
-         <input type="number" id="Mobile NO" name="Mobile NO" required>
+</a></li>
 
-        <!-- Submit button -->
-        <input type="submit" value="Submit" class="submit" autocomplete="on " onclick="myfunction()">
-        <input type="reset" value="reset" class="reset" autocomplete="on " >
-    </form>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href='#'>computer cource</a></li>
+            <li><a href='#'>student portal</a></li>
+            <li><a href='#'>Teacher's</a></li>
+            <li><a href='information .html'>inquiry form</a></li>
+
+        </ul>
 
 
 
 
 
+        <ul>
+            <li><a href='index.html'><img src="https://lh3.googleusercontent.com/p/AF1QipPsRQkIe22ShSy6C_A1lpJ1wmPjh3bQtIeJwPdI=s1360-w1360-h1020"alt=""></a></li>
+            <li class="hideOnMobile"><a href='#'></a></li>
+            <li class="hideOnMobile"><a href='#'>computer cource</a></li>
+            <li class="hideOnMobile"><a href="https://studentportal.silveroakuni.ac.in/">pictures</a></li>
+            <li class="hideOnMobile"><a href='#'>Teacher's</a></li>
+            <li class="hideOnMobile"><a href='information .html'>Inquiry form</a></li>
+
+            <li class="menu-button" onclick=showSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+
+        </ul>
 
 
 
 
+    </nav>
+    
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
 
+        }
 
+       
+    </script>
 
-
-
-
-
-
-
-
+    
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxGkUSLiAuz_m2T7MlHyBQS6eACgF8xGuYXNrsc0JrHvisYgzwRGttRDmdD_4GtsCwD/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -127,10 +182,10 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
-            form.reset();
         })
 
         
       </script>
 </body>
+
 </html>

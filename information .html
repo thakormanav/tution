@@ -43,6 +43,7 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: black;
         background-color: aliceblue;
+        font-size: 15px;
        }
        
        .submit:hover{
@@ -61,16 +62,25 @@
        }
        
        .reset:hover{
-       background-color: aqua;
+       background-color: rgb(250, 255, 255);
        color: black;
        }
 
 
+
+
+       
         @media screen and (max-width: 600px) {
             form {
                 padding: 10px;
             }
         }
+
+
+
+
+
+
     </style>
     <title>Responsive User Inquiry Form</title>
 </head>
@@ -98,7 +108,7 @@
          <input type="number" id="Mobile NO" name="Mobile NO" required>
 
         <!-- Submit button -->
-        <input type="submit" value="Submit" class="submit" autocomplete="on " >
+        <input type="submit" value="submit" class="submit" autocomplete="on " >
       <b>  <input type="reset" value="reset" class="reset" autocomplete="on " ></b>
     </form>
 

@@ -11,6 +11,7 @@
         img {
 
             width: 70px;
+           
             
 
         }
@@ -18,7 +19,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('https://lh3.googleusercontent.com/p/AF1QipM9T8rDSdGouQM025f8iMSobmTfB2GEOpQu1ws8=s1360-w1360-h1020') no-repeat center center fixed;
+            background: url('https://lh3.googleusercontent.com/p/AF1QipMpQ_nwUL2HcxAX6AuaNysHCC46ZtmvVzYcidhq=s1360-w1360-h1020') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
            
@@ -28,6 +29,7 @@
         nav {
             background-color: rgb(255, 255, 255);
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+           
          
 
         }
@@ -129,7 +131,7 @@
             <li><a href='#'>computer cource</a></li>
             <li><a href='#'>student portal</a></li>
             <li><a href='#'>Teacher's</a></li>
-            <li><a href='information .html'>inquiry form</a></li>
+            <li><a href='information.html'>inquiry form</a></li>
 
         </ul>
 
@@ -143,7 +145,7 @@
             <li class="hideOnMobile"><a href='#'>computer cource</a></li>
             <li class="hideOnMobile"><a href="https://studentportal.silveroakuni.ac.in/">pictures</a></li>
             <li class="hideOnMobile"><a href='#'>Teacher's</a></li>
-            <li class="hideOnMobile"><a href='information .html'>Inquiry form</a></li>
+            <li class="hideOnMobile"><a href='information.html'>Inquiry form</a></li>
 
             <li class="menu-button" onclick=showSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -155,6 +157,7 @@
 
 
     </nav>
+    
     <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')
@@ -165,7 +168,24 @@
             sidebar.style.display = 'none'
 
         }
+
+       
     </script>
+
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGkUSLiAuz_m2T7MlHyBQS6eACgF8xGuYXNrsc0JrHvisYgzwRGttRDmdD_4GtsCwD/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        
+      </script>
 </body>
 
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: rgb(0, 136, 181);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+       .submit{
+        width:100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        background-color: aliceblue;
+       }
+       
+       .submit:hover{
+       background-color: aqua;
+       color: black;
+       }
+
+       
+       .reset{
+        width:100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        background-color: aliceblue;
+       }
+       
+       .reset:hover{
+       background-color: aqua;
+       color: black;
+       }
+
+       
+        @media screen and (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+        }
+    </style>
+    <title>Responsive User Inquiry Form</title>
+</head>
+<body>
+
+    <h2>User Inquiry Form</h2>
+
+    <form  name="submit-to-google-sheet" method="post" autocomplete="ON">
+        <!-- Name input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email input -->
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required>
+
+
+         <!-- Email input -->
+         <label for="AGE">AGE:</label>
+         <input type="TEXT" id="AGE" name="AGE" required>
+
+      
+         <!-- Email input -->
+         <label for="AGE">Mobile NO:</label>
+         <input type="number" id="Mobile NO" name="Mobile NO" required>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit" class="submit" autocomplete="on " onclick="myfunction()">
+        <input type="reset" value="reset" class="reset" autocomplete="on " >
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGkUSLiAuz_m2T7MlHyBQS6eACgF8xGuYXNrsc0JrHvisYgzwRGttRDmdD_4GtsCwD/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+
+        
+      </script>
+</body>
+</html>

@@ -9,6 +9,181 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-image: linear-gradient(rgb(117, 56, 128),rgb(217, 198, 26));
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+opacity: 110%;
+color: white;
+       
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+           border-radius: 5px;
+          
+            color: rgb(20, 17, 17);
+            opacity: 70%;
+        }
+        input:hover {
+           
+            opacity: 100%;
+        }
+
+       .submit{
+        width:100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        font-size: 16px;
+        background-color: aliceblue;
+        border-radius: 10px;
+       }
+       
+       .submit:hover{
+       background-color: aqua;
+       color: black;
+       }
+
+       
+       .reset{
+        width:100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        font-size: 16px;
+        background-color: aliceblue;
+        border-radius: 10px;
+       }
+       
+       .reset:hover{
+       background-color: aqua;
+       color: black;
+       }
+
+       
+        @media screen and (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+        }
+
+       
+
+    </style>
+    <title>Responsive User Inquiry Form</title>
+</head>
+<body>
+
+    <h2>User Inquiry Form</h2>
+
+    <form  name="submit-to-google-sheet" method="post" autocomplete="ON">
+
+                <!-- Email input -->
+                <label for="email">inquiry date:-</label>
+                <input type="date" id="email" name="inquiry date"  required>
+        <!-- Name input -->
+        <label for="name">Name:-</label>
+        <input type="text" id="name" name="name" placeholder="enter your name" required>
+
+        <!-- Email input -->
+        <label for="email">email:-</label>
+        <input type="email" id="email" name="email" placeholder="enter your email" required>
+
+                <!-- Email input -->
+                <label for="email">date of birth:-</label>
+                <input type="date" id="email" name="birth date" placeholder="enter your birth date" required>
+
+
+                        <!-- Email input -->
+        <label for="email">education:-</label>
+        <input type="text" id="email" name="education" placeholder="enter your education"required>
+
+
+         <!-- Email input -->
+    
+         <!-- Email input -->
+         <label for="AGE">Mobile NO:-</label>
+         <input type="number" id="Mobile NO" name="Mobile NO" placeholder="enter your mobile no"required size="10">
+
+         <label for="AGE">address:-</label>
+         <input type="text" id="Mobile NO" name="address" size="10" placeholder="enter yur address" required >
+
+         <label for="">which cource are intreastd ?</label>
+ <input type="text" name="cource" requird>
+
+    
+    <br>
+    
+    <br>
+        <!-- Submit button -->
+        <input type="submit" value="Submit" class="submit" autocomplete="on " onclick="myfunction()">
+        <input type="reset" value="Reset" class="reset" autocomplete="on " >
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGkUSLiAuz_m2T7MlHyBQS6eACgF8xGuYXNrsc0JrHvisYgzwRGttRDmdD_4GtsCwD/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+
+        
+      </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         h2 {

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online MCQ Exam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      
+      padding: 20PX;
+    }
+
+    @media only screen and (max-width: 600px) {
+      form {
+        max-width: 100%;
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Online MCQ Exam</h1>
+<form id="mcqForm">
+  <!-- Question 1 -->
+  <p>1. What is the capital of France?</p>
+  <label><input type="radio" name="q1" value="a"> a) Paris</label>
+  <label><input type="radio" name="q1" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q1" value="c"> c) London</label>
+
+  <p>2. What is the capital of France?</p>
+  <label><input type="radio" name="q2" value="a"> a) Paris</label>
+  <label><input type="radio" name="q2" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q2" value="c"> c) London</label>
+
+
+  <p>3. What is the capital of France?</p>
+  <label><input type="radio" name="q3" value="a"> a) Paris</label>
+  <label><input type="radio" name="q" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q3" value="c"> c) London</label>
+
+
+
+
+  <p>4. What is the capital of France?</p>
+  <label><input type="radio" name="q4" value="a"> a) Paris</label>
+  <label><input type="radio" name="q4" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q4" value="c"> c) London</label>
+
+
+
+
+  <p>5. What is the capital of France?</p>
+  <label><input type="radio" name="q5" value="a"> a) Paris</label>
+  <label><input type="radio" name="q5" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q5" value="c"> c) London</label>
+
+
+
+
+
+  <p>6. What is the capital of France?</p>
+  <label><input type="radio" name="q6" value="a"> a) Paris</label>
+  <label><input type="radio" name="q6" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q6" value="c"> c) London</label>
+
+
+
+
+
+  <p>7. What is the capital of France?</p>
+  <label><input type="radio" name="q7" value="a"> a) Paris</label>
+  <label><input type="radio" name="q7" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q7" value="c"> c) London</label>
+
+
+
+
+
+  <p>8. What is the capital of France?</p>
+  <label><input type="radio" name="q8" value="a"> a) Paris</label>
+  <label><input type="radio" name="q8" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q8" value="c"> c) London</label>
+
+
+
+
+
+
+  <p>9. What is the capital of France?</p>
+  <label><input type="radio" name="q9" value="a"> a) Paris</label>
+  <label><input type="radio" name="q9" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q9" value="c"> c) London</label>
+
+
+
+
+
+
+  <p>10. What is the capital of France?</p>
+  <label><input type="radio" name="q10" value="a"> a) Paris</label>
+  <label><input type="radio" name="q10" value="b"> b) Berlin</label>
+  <label><input type="radio" name="q10" value="c"> c) London</label>
+
+
+
+
+
+
+
+
+
+
+  <br><br>
+  <button type="button" onclick="calculateIQ()">Submit Answers</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+  function calculateIQ() {
+    let correctAnswers = 0;
+
+    // Check each question and increment correctAnswers if the answer is correct
+    if (document.getElementById('mcqForm').q1.value === 'a') correctAnswers++;
+    if (document.getElementById('mcqForm').q2.value === 'c') correctAnswers++;
+    if (document.getElementById('mcqForm').q3.value === 'b') correctAnswers++;
+    if (document.getElementById('mcqForm').q4.value === 'a') correctAnswers++;
+    if (document.getElementById('mcqForm').q5.value === 'a') correctAnswers++;
+    if (document.getElementById('mcqForm').q6.value === 'b') correctAnswers++;
+    if (document.getElementById('mcqForm').q7.value === 'b') correctAnswers++;
+    if (document.getElementById('mcqForm').q8.value === 'b') correctAnswers++;
+    if (document.getElementById('mcqForm').q9.value === 'a') correctAnswers++;
+    if (document.getElementById('mcqForm').q10.value === 'b') correctAnswers++;
+
+    // Calculate IQ level based on correct answers
+    let iqLevel = (correctAnswers / 20) * 100;
+
+    // Display the result
+    let resultElement = document.getElementById('result');
+    resultElement.innerHTML = window.location.href=("inquiry.html")
+
+
+
+    alert(`You answered ${correctAnswers} out of 20 questions correctly.\nYour IQ level is ${iqLevel.toFixed(2)}.`);
+  }
+</script>
+
+</body>
+</html>

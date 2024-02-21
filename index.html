@@ -7,30 +7,33 @@
             margin: 0;
             padding: 0;
         }
-        
+
         img {
 
             width: 70px;
-           
-            
+
+
 
         }
 
         body {
+            
             margin: 0;
             padding: 0;
-            background: url('https://lh3.googleusercontent.com/p/AF1QipN2vuIz32tyDstt6ZLMP_5aDb0EHRAk-UVne9Cc=s680-w680-h510') no-repeat center center fixed;
+            box-sizing: border-box;
+            background-image: linear-gradient(rgb(254, 254, 5),rgb(198, 4, 227));
             background-size: cover;
             height: 100vh;
-           
+            background-repeat: no-repeat;
             
+
         }
 
         nav {
             background-color: rgb(255, 255, 255);
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-           
-         
+
+
 
         }
 
@@ -77,7 +80,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            opacity: 70%;
+            opacity: 100%;
             background-color: rgb(235, 235, 235);
         }
 
@@ -88,6 +91,8 @@
         .sidebar a {
             width: 100%;
         }
+
+
 
         .menu-button {
             display: none;
@@ -102,35 +107,177 @@
         }
 
 
+
         .menu-button {
             display: block;
         }
-    </style>
+
+
+        @media screen and (min-width:300px) {
+            h1 {
+                font-size:3em;
+                /* Adjust font size for screens wider than 600px */
+            }
+          
+        }
+
+        
+        @media screen and (min-width: 400px) {
+            h1 {
+                font-size:4em;
+                /* Adjust font size for screens wider than 600px */
+            }
+          
+        }
 
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-   
+        
+        @media screen and (min-width: 510px) {
+            h1 {
+                font-size:5em;
+                /* Adjust font size for screens wider than 600px */
+            }
+          
+        }
+        
+        @media screen and (min-width: 600px) {
+            h1 {
+                font-size:5em;
+                /* Adjust font size for screens wider than 600px */
+            }
+            
+        }
+
+        
+
+        @media screen and (min-width: 900px) {
+            h1 {
+                font-size: 5em;
+                /* Adjust font size for screens wider than 900px */
+            }
+            
+        }
+
+
+
+        h1 {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 5px black;
+             text-align: center;
+             margin-top: 90px;
+            
+             
+         }
+
+
+        @keyframes mnv{
+            0%{
+                background-image: linear-gradient(rgb(200, 4, 230), yellow);
+            }
+
+            15%{
+                background-image: linear-gradient(yellow,rgb(210, 4, 242));
+            }
+
+            100%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+            
+            
+            150%{
+                background-image: linear-gradient(yellow,rgb(198, 4, 227));
+            }
+            200%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+            
+            250%{
+                background-image: linear-gradient(yellow,rgb(198, 4, 227));
+            }
+            
+            60%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+            60%{
+                background-image: linear-gradient(yellow,rgb(198, 4, 227));
+            }
+            60%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+          
+            70%{
+                background-image: linear-gradient(yellow,rgb(198, 4, 227));
+            }
+            80%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+            90%{
+                background-image: linear-gradient(yellow,rgb(198, 4, 227));
+            }
+            100%{
+                background-image: linear-gradient(rgb(198, 4, 227), yellow);
+            }
+
+        }
+        h3{
+           font-size: 15px;
+           background-color: rgb(222, 3, 230);
+           
+           position: fixed;
+           color: white;
+           margin-left: 5px;
+           text-shadow: 0 0 3px black;
+           text-align: center;
+           animation: travel 10s linear infinite;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    
+
+        @keyframes travel {
+            from {
+              transform: translateX(100%); /* Start off-screen to the right */
+            }
+            to {
+              text-transform : translateX(-100%); /* Move to off-screen to the left */
+            }
+          }
+        </style>
+      </head>
+      <body>
+      
+      
+    
+
+
+
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=, initial-scale=1.0">
+
     <title>Document</title>
 </head>
 
 <body>
+    
     <nav>
 
 
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
-<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-</svg>
+<ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 -960 960 960" width="26">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
 
-</a></li>
+
+            </a>
+            </li>
 
 
             <li><a href="index.html">Home</a></li>
             <li><a href='#'>computer cource</a></li>
-            <li><a href='#'>student portal</a></li>
-            <li><a href='#'>Teacher's</a></li>
+            <li><a href='#'>online exam</a></li>
+            <li><a href='#'>payment</a></li>
             <li><a href="inquiry.html">inquiry form</a></li>
 
         </ul>
@@ -140,15 +287,18 @@
 
 
         <ul>
-            <li><a href='index.html'><img src="https://lh3.googleusercontent.com/p/AF1QipPsRQkIe22ShSy6C_A1lpJ1wmPjh3bQtIeJwPdI=s1360-w1360-h1020"alt=""></a></li>
-            <li class="hideOnMobile"><a href='#'></a></li>
+            <li><a href='index.html'><img
+                        src="https://lh3.googleusercontent.com/p/AF1QipPsRQkIe22ShSy6C_A1lpJ1wmPjh3bQtIeJwPdI=s1360-w1360-h1020"
+                        alt=""></a></li>
+            <li class="hideOnMobile"><a href='onlineexam.html'>online exam</a></li>
             <li class="hideOnMobile"><a href='#'>computer cource</a></li>
-            <li class="hideOnMobile"><a href="https://studentportal.silveroakuni.ac.in/">pictures</a></li>
-            <li class="hideOnMobile"><a href='#'>Teacher's</a></li>
+            <li class="hideOnMobile"><a href="https://studentportal.silveroakuni.ac.in/">gallary</a></li>
+            <li class="hideOnMobile"><a href='#'>payment</a></li>
             <li class="hideOnMobile"><a href="inquiry.html">Inquiry form</a></li>
 
-            <li class="menu-button" onclick=showSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            <li class="menu-button" onclick=showSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 -960 960 960" width="26">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                     </svg></a></li>
 
         </ul>
@@ -156,8 +306,13 @@
 
 
 
-    </nav>
-    
+    </nav><br><br>
+    <h3>અમારું પરિણામ એજ  અમારી ઓળખ  </h3>
+    <h1>શ્રીજી <br><br><b>group ટ્યુશન</b></h1>
+    <br>
+    <br>
+   
+
     <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')
@@ -169,23 +324,23 @@
 
         }
 
-       
+
     </script>
 
-    
+
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxGkUSLiAuz_m2T7MlHyBQS6eACgF8xGuYXNrsc0JrHvisYgzwRGttRDmdD_4GtsCwD/exec'
         const form = document.forms['submit-to-google-sheet']
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
         })
 
-        
-      </script>
+
+    </script>
 </body>
 
 </html>

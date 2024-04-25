@@ -6,10 +6,28 @@
   <title>Online MCQ Exam</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+      color: white;
+      text-align: center;
       padding: 20PX;
+      background-size:100% 100% ;
+      background-repeat: no-repeat;
+      background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     }
+
+    button{
+      font-size: 25px;
+      border-radius: 5px;
+      border: none;
+      color: black;
+   background-color: green;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+button:hover{
+  background-color: aliceblue;
+}
 
     @media only screen and (max-width: 600px) {
       form {
@@ -23,7 +41,7 @@
 <body>
 
 <h1>Online MCQ Exam</h1>
-<form id="mcqForm">
+<form id="mcqForm">x
   <!-- Question 1 -->
   <p>1. What is the capital of France?</p>
   <label><input type="radio" name="q1" value="a"> a) Paris</label>

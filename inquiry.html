@@ -10,7 +10,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-image: repeating-linear-gradient(90deg, rgba(13, 13, 13,0.09) 0px, rgba(13, 13, 13,0.09) 36px,rgba(229, 229, 229,0.09) 36px, rgba(229, 229, 229,0.09) 72px,transparent 72px, transparent 108px,rgba(163, 163, 163,0.09) 108px, rgba(163, 163, 163,0.09) 144px,rgba(21, 21, 21,0.09) 144px, rgba(21, 21, 21,0.09) 180px),repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 14px,transparent 14px, transparent 28px,rgba(0,0,0,0.08) 28px, rgba(0,0,0,0.08) 42px,transparent 42px, transparent 56px,rgba(0,0,0,0.08) 56px, rgba(0,0,0,0.08) 70px),repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 23px,transparent 23px, transparent 46px,rgba(0,0,0,0.08) 46px, rgba(0,0,0,0.08) 69px,transparent 69px, transparent 92px,rgba(0,0,0,0.08) 92px, rgba(0,0,0,0.08) 115px),repeating-linear-gradient(90deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 6px,transparent 6px, transparent 12px,rgba(0,0,0,0.04) 12px, rgba(0,0,0,0.04) 18px,transparent 18px, transparent 24px,rgba(0,0,0,0.04) 24px, rgba(0,0,0,0.04) 30px),linear-gradient(90deg, rgb(212, 109, 30),rgb(176, 117, 193));            background-repeat: no-repeat;
+            background-image: repeating-linear-gradient(90deg, rgba(13, 13, 13, 0.09) 0px, rgba(13, 13, 13, 0.09) 36px, rgba(229, 229, 229, 0.09) 36px, rgba(229, 229, 229, 0.09) 72px, transparent 72px, transparent 108px, rgba(163, 163, 163, 0.09) 108px, rgba(163, 163, 163, 0.09) 144px, rgba(21, 21, 21, 0.09) 144px, rgba(21, 21, 21, 0.09) 180px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 14px, transparent 14px, transparent 28px, rgba(0, 0, 0, 0.08) 28px, rgba(0, 0, 0, 0.08) 42px, transparent 42px, transparent 56px, rgba(0, 0, 0, 0.08) 56px, rgba(0, 0, 0, 0.08) 70px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 23px, transparent 23px, transparent 46px, rgba(0, 0, 0, 0.08) 46px, rgba(0, 0, 0, 0.08) 69px, transparent 69px, transparent 92px, rgba(0, 0, 0, 0.08) 92px, rgba(0, 0, 0, 0.08) 115px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.04) 0px, rgba(0, 0, 0, 0.04) 6px, transparent 6px, transparent 12px, rgba(0, 0, 0, 0.04) 12px, rgba(0, 0, 0, 0.04) 18px, transparent 18px, transparent 24px, rgba(0, 0, 0, 0.04) 24px, rgba(0, 0, 0, 0.04) 30px), linear-gradient(90deg, rgb(212, 109, 30), rgb(176, 117, 193));
+            background-repeat: no-repeat;
             background-size: 100% 120%;
         }
 
@@ -19,9 +20,7 @@
             font-size: 35px;
             text-shadow: 2px 2px 5px rgb(8, 8, 8);
             color: rgb(243, 241, 241);
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-        
-        
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
         }
 
         form {
@@ -38,7 +37,7 @@
             margin-bottom: 8px;
             text-shadow: 2px 2px 5px rgb(12, 12, 12);
             color: rgb(235, 233, 233);
-            font-size: 20px;
+            font-size: 25px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
@@ -49,7 +48,7 @@
             margin-bottom: 16px;
             box-sizing: border-box;
             border-radius: 5px;
-background-color: black;
+            background-color: black;
             color: rgb(248, 245, 245);
             opacity: 70%;
         }
@@ -87,13 +86,24 @@ background-color: black;
             background-color: aqua;
             color: black;
         }
-
-
+select{
+    background-color: rgb(7, 10, 10);
+    color: white;
+    opacity: 70%;
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+}
+select:hover{
+    
+    opacity: 100%;
+}
         @media screen and (max-width: 600px) {
             form {
                 padding: 10px;
             }
-            h2{
+
+            h2 {
                 font-size: 25px;
             }
         }
@@ -103,7 +113,7 @@ background-color: black;
 
 <body>
 
-    <h2>inquiry  form</h2>
+    <h2>inquiry form</h2>
     <br>
     <br>
 
@@ -116,22 +126,50 @@ background-color: black;
         <label for="email">Email id:-</label>
         <input type="email" id="time" name="Email id" required>
         <!-- Name input -->
-        <label for="mobile no">Mobile no:-</label>
+        <label for="mobile no">Contact no:-</label>
         <input type="number" id="pname" name="Mobile no" placeholder="Enter mobile" required>
-
-       
-        <label for="cource">cource:-</label>
-        <input type="text" id="sname" name="Cource" placeholder="Enter cource" required>
 
         <label for="address">Address:-</label>
         <input type="text" id="std" name="Address" placeholder="Enter address" required>
 
 
+
+
+        <label for="cource">Gender:-</label>
+        <select id="courseSelect" name="Gender">
+            <option value=""> </option>
           
+            <option value="male">male</option>
+            <option value="femal">femal</option>
+
+        </select>
+        <br><br>
+        <label for="cource">Cource:-</label>
+        <select id="courseSelect" name="Cource">
+            <option value=""> </option>
+            <option value="Math">CCC</option>
+            <option value="Science">CMO</option>
+            <option value="English">typing</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="cource">Refer:-</label>
+        <select id="courseSelect" name="Refer">
+            <option value=""> </option>
+           
+            <option value="By friend">By friend</option>
+            <option value="By website">By website</option>
+
+        </select>
+
+
+
         <br>
 
         <br>
-        
+
         <input type="submit" value="Submit" class="submit" autocomplete="on " onclick="myfunction()">
         <input type="reset" value="Reset" class="reset" autocomplete="on ">
     </form>

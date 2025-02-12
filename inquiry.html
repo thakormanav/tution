@@ -10,35 +10,57 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-image: repeating-linear-gradient(90deg, rgba(13, 13, 13, 0.09) 0px, rgba(13, 13, 13, 0.09) 36px, rgba(229, 229, 229, 0.09) 36px, rgba(229, 229, 229, 0.09) 72px, transparent 72px, transparent 108px, rgba(163, 163, 163, 0.09) 108px, rgba(163, 163, 163, 0.09) 144px, rgba(21, 21, 21, 0.09) 144px, rgba(21, 21, 21, 0.09) 180px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 14px, transparent 14px, transparent 28px, rgba(0, 0, 0, 0.08) 28px, rgba(0, 0, 0, 0.08) 42px, transparent 42px, transparent 56px, rgba(0, 0, 0, 0.08) 56px, rgba(0, 0, 0, 0.08) 70px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 23px, transparent 23px, transparent 46px, rgba(0, 0, 0, 0.08) 46px, rgba(0, 0, 0, 0.08) 69px, transparent 69px, transparent 92px, rgba(0, 0, 0, 0.08) 92px, rgba(0, 0, 0, 0.08) 115px), repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.04) 0px, rgba(0, 0, 0, 0.04) 6px, transparent 6px, transparent 12px, rgba(0, 0, 0, 0.04) 12px, rgba(0, 0, 0, 0.04) 18px, transparent 18px, transparent 24px, rgba(0, 0, 0, 0.04) 24px, rgba(0, 0, 0, 0.04) 30px), linear-gradient(90deg, rgb(212, 109, 30), rgb(176, 117, 193));
-            background-repeat: no-repeat;
-            background-size: 100% 120%;
+background-color: rgb(255, 255, 255);
+            
         }
 
         h2 {
             text-align: center;
             font-size: 35px;
-            text-shadow: 2px 2px 5px rgb(8, 8, 8);
-            color: rgb(243, 241, 241);
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+            text-shadow: 2px 2px 5px rgb(45, 43, 43);
+            color: rgb(0, 0, 0);
+           text-shadow: 0 0 10px rgb(255, 254, 254);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            animation: mnv 5s linear infinite;
         }
+
+        @keyframes mnv {
+            0% {
+                font-size: 35px;
+            }
+
+            50% {
+                font-size: 40px;
+            }
+
+            50% {
+                font-size: 40px;
+            }
+
+
+        }
+
 
         form {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
             opacity: 110%;
-            color: white;
-
+            color: rgb(255, 255, 255);
+            background-image:url(https://png.pngtree.com/png-clipart/20241004/original/pngtree-teacher-helping-student-with-homework-clipart-illustration-png-image_16196017.png) ;            
+            background-repeat: no-repeat;
+            background-size: 100% 120%;
+ border-radius: 15px;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
             text-shadow: 2px 2px 5px rgb(12, 12, 12);
-            color: rgb(235, 233, 233);
+            color: rgb(0, 0, 0);
             font-size: 25px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           
         }
 
         input,
@@ -113,7 +135,7 @@ select:hover{
 
 <body>
 
-    <h2>inquiry form</h2>
+    <h2>Registration form</h2>
     <br>
     <br>
 

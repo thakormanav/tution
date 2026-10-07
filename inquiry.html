@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -411,108 +410,77 @@
 
     <script>
 
-        /*
-        =====================================================
-        GOOGLE APPS SCRIPT WEB APP URL
-        =====================================================
-        */
+const scriptURL =
+    'https://script.google.com/macros/s/AKfycbw5b7dquhldXZ_RenBz7xDrsaL0FXO385J7eKle1vkDrcK5NAx--WXfqE85tvT9HmJX/exec';
 
-        const scriptURL =
-            'https://script.google.com/macros/s/AKfycbw5b7dquhldXZ_RenBz7xDrsaL0FXO385J7eKle1vkDrcK5NAx--WXfqE85tvT9HmJX/exec';
+const form = document.forms['submit-to'];
 
+const successMessage =
+    document.getElementById('successMessage');
 
-        const form =
-            document.forms['submit-to'];
+const submitButton =
+    document.querySelector('.submit');
 
 
-        const successMessage =
-            document.getElementById('successMessage');
+form.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
+    // Change button text
+    submitButton.value = 'Submitting...';
+
+    submitButton.disabled = true;
 
 
-        /*
-        =====================================================
-        FORM SUBMIT
-        =====================================================
-        */
+    // Send information to Google Sheet
+    fetch(scriptURL, {
 
-        form.addEventListener('submit', function (e) {
+        method: 'POST',
 
-            e.preventDefault();
+        body: new FormData(form)
 
+    })
 
-            const submitButton =
-                document.querySelector('.submit');
+    .then(response => {
 
+        // ⭐ CLEAR ALL INFORMATION AFTER SUBMIT
+        form.reset();
 
-            submitButton.value =
-                'Submitting...';
+        // Show success message
+        successMessage.style.display = 'block';
 
-            submitButton.disabled =
-                true;
+        // Restore button
+        submitButton.value = 'Submit';
 
-
-            /*
-            Send form data to Google Sheet
-            */
-
-            fetch(scriptURL, {
-
-                method: 'POST',
-
-                body: new FormData(form)
-
-            })
-
-            .then(response => {
-
-                successMessage.style.display =
-                    'block';
-
-                form.reset();
-
-                submitButton.value =
-                    'Submit';
-
-                submitButton.disabled =
-                    false;
+        submitButton.disabled = false;
 
 
-                /*
-                Hide success message
-                after 4 seconds
-                */
+        // Hide success message after 4 seconds
+        setTimeout(() => {
 
-                setTimeout(() => {
+            successMessage.style.display = 'none';
 
-                    successMessage.style.display =
-                        'none';
+        }, 4000);
 
-                }, 4000);
+    })
 
-            })
+    .catch(error => {
 
-            .catch(error => {
+        console.error('Error!', error);
 
-                console.error(
-                    'Error!',
-                    error
-                );
+        alert(
+            'Something went wrong. Your information was not submitted.'
+        );
 
-                alert(
-                    'Something went wrong. Please try again.'
-                );
+        submitButton.value = 'Submit';
 
-                submitButton.value =
-                    'Submit';
+        submitButton.disabled = false;
 
-                submitButton.disabled =
-                    false;
+    });
 
-            });
+});
 
-        });
-
-    </script>
+</script>
 
 </body>
 
